@@ -38,10 +38,8 @@ int main()
 	return 0;
 
 }
-*/
-<<<<<<< HEAD
 
-=======
+*/
 /*
 >>>>>>> main
 int main()
@@ -203,7 +201,7 @@ struct student{
 };
 
 struct group{
-	std::string gname;
+	std::string name;
 	student st1;
 	student st2;
 	student st3;
@@ -219,14 +217,14 @@ struct bajin  {
 
 
 struct ambion {
-	std::string ambname;
- 	bajin bajinname;
+	std::string name;
+ 	bajin bjn;
 };
 
 struct univer {
 	std::string name;
 	std::string city;
-	ambion ambname;
+	ambion amb;
 
 };
 
@@ -235,31 +233,45 @@ int main(){
 	univer.name = "VPH";
 	univer.city  = "Vanadzor";
 	ambion amb;
-	amb.ambname = "IT";
-	bajin bajin;
-	bajin.name = "UI/UX Design";
+
+	univer.amb.name = "IT";
+	bajin bjn;
+	amb.bjn.name = "UI/UX Design";
+		
+
+	group grp;		
+	bjn.grp.name = "First"; 
 	
-
-	group group_x;
-	grp.gname = "UI Design";
-	grp.gr = group_x;
-
-
-	student student1 ;
+	
+	student st1;
 	st1.name = "Gor ";
 	st1.surname = "Grigoryan";
-	gname.st1 = student1;
-	student student2;
-	st2.name = "Michael";
+	grp.st1 = st1;
+	std::cout << univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st1.name << grp.st1.surname <<  std::endl; 
+	
+	student st2;	
+	st2.name = "Michael ";
 	st2.surname = "Jackson";
-	gname.st2 = student2;
-	std::cout << univer.name << "\n" << univer.city << "\n" << amb.ambname << "\n" << bajin.name  << "\n" << grp.gname << "\n" << st1.name << st1.surname <<  std::endl; 
+	grp.st2 = st2;
+	std::cout << "\n"<< univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st2.name << grp.st2.surname <<  std::endl; 
+	student st3;	
+	st3.name = "Rafik ";
+	st3.surname = "Kirakosyan";
+	grp.st3 = st3;
+	std::cout << "\n"  <<univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st3.name << grp.st3.surname <<  std::endl; 
 
-};
-
-
-
-
+	student st4;	
+	st4.name = "Avag ";
+	st4.surname = "Avagyan";
+	grp.st4 = st4;
+	std::cout << "\n"  << univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st4.name << grp.st4.surname <<  std::endl; 
+	
+ 	student st5;	
+	st5.name = "Arevik ";
+	st5.surname = "Ananyan";
+	grp.st5 = st5;
+	std::cout << "\n"<< univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st5.name << grp.st5.surname <<  std::endl; 
+ };
 
 
 
