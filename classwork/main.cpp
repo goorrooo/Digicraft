@@ -197,23 +197,24 @@ int main(){
 }
 
 */
-struct student {
+struct student{
 	std::string name;
 	std::string surname;
 };
+
 struct group{
-	std::string grname;
+	std::string gname;
 	student st1;
-	student s2;
-	student s3;
-	student s4;
-	student s5;
+	student st2;
+	student st3;
+	student st4;
+	student st5;
 };
 
 
 struct bajin  {
 	std::string name;
-	group grname;
+	group grp;
 };
 
 
@@ -231,27 +232,28 @@ struct univer {
 
 int main(){
 	univer univer;
-	
 	univer.name = "VPH";
 	univer.city  = "Vanadzor";
 	ambion amb;
 	amb.ambname = "IT";
 	bajin bajin;
 	bajin.name = "UI/UX Design";
-	group gr;
-	gr.grname = "UI Design";
 	
+
+	group group_x;
+	grp.gname = "UI Design";
+	grp.gr = group_x;
 
 
 	student student1 ;
 	st1.name = "Gor ";
 	st1.surname = "Grigoryan";
-	gr.st1 = student1;
+	gname.st1 = student1;
 	student student2;
 	st2.name = "Michael";
 	st2.surname = "Jackson";
-	gr.st2 = student2;
-	std::cout << univer.name << "\n" << univer.city << "\n" << amb.ambname << "\n" << bajin.name  << "\n" << gr.grname << "\n" << st1.name << st1.surname <<  std::endl; 
+	gname.st2 = student2;
+	std::cout << univer.name << "\n" << univer.city << "\n" << amb.ambname << "\n" << bajin.name  << "\n" << grp.gname << "\n" << st1.name << st1.surname <<  std::endl; 
 
 };
 
@@ -267,7 +269,6 @@ int main(){
 
 
 
->>>>>>> main
 
 
 
