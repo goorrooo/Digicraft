@@ -227,7 +227,16 @@ struct univer {
 	ambion amb;
 
 };
-
+/*	univer vph
+	ambion it
+	bajin progrm
+	group mygroup
+	student gor;
+	student alik;
+	student garik;
+	gor.name = "Gor";
+	mygroup.st1  = gor;
+	
 int main(){
 	univer univer;
 	univer.name = "VPH";
@@ -273,7 +282,7 @@ int main(){
 	std::cout << "\n"<< univer.name << "\n" << univer.city << "\n" << univer.amb.name << "\n" << amb.bjn.name  << "\n" << bjn.grp.name << "\n" << grp.st5.name << grp.st5.surname <<  std::endl; 
  };
 
-
+*/
 
 
 
