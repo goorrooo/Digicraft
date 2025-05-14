@@ -58,7 +58,7 @@ int main (){
 	return 1;
 } else if (emp1.porc < 2){
 	std::cout << "Bonus: " <<  5.0/100*ashv << std::endl;
-}else if (emp1.porc >= 5){
+}else if (emp1.porc <= 5){
 	std::cout << "Bonus: " << 10.0/100*ashv << std::endl;
 
 }else {
