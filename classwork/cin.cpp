@@ -164,36 +164,38 @@ enum math {
 };
 
 int main(){
-	enum math gorc;
+	enum math mth;
 	std::cout << "Input number:" << std::endl;
 	int num1 = 0;
 	int num2 = 0;
 	std::cin >> num1;
 	std::cin >> num2;
 	std::cout << "Input operator: +, -, *, /  "  << std::endl;
-	enum math gorc = std::string sym;
-	switch(gorc){
+	char sym = ' ';
+	std::cin >> sym;
+	switch(mth){
+	if(sym == '+'){
 	case GUMARUM:
 	 	std::cout << num1+num2 << std::endl;
-		break;
-	case HANUM: 
+		break; } else if(sym == '-'){
+		case HANUM: 
 		std::cout << num1-num2 << std::endl;
-		break;
+		break; } else if(sym == '/'){
 	case BAJANUM:
 		std::cout << num1/num2 << std::endl;
-		break;
+		break; } else if(sym == '*'){
 	case BAZMAPATKUM: 
 		std::cout << num1*num2 << std::endl;
-		break;
+		break; } else {
 	default:
 		std::cout << "Unknown" << std::endl;		
-		break;
+		break; } }
 }
 	
 
 
 
-}
+
 
 
 
