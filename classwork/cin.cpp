@@ -164,7 +164,6 @@ enum math {
 };
 
 int main(){
-	enum math mth;
 	std::cout << "Input number:" << std::endl;
 	int num1 = 0;
 	int num2 = 0;
@@ -173,23 +172,30 @@ int main(){
 	std::cout << "Input operator: +, -, *, /  "  << std::endl;
 	char sym = ' ';
 	std::cin >> sym;
+	enum math mth = (enum math)sym;	
 	switch(mth){
-	if(sym == '+'){
 	case GUMARUM:
+		if(sym=='+'){
 	 	std::cout << num1+num2 << std::endl;
-		break; } else if(sym == '-'){
-		case HANUM: 
+		break; }
+	case HANUM:
+		if(sym=='-'){
 		std::cout << num1-num2 << std::endl;
-		break; } else if(sym == '/'){
-	case BAJANUM:
-		std::cout << num1/num2 << std::endl;
-		break; } else if(sym == '*'){
-	case BAZMAPATKUM: 
+		break;}
+	case BAZMAPATKUM:
+		if(sym=='*'){
 		std::cout << num1*num2 << std::endl;
-		break; } else {
-	default:
-		std::cout << "Unknown" << std::endl;		
-		break; } }
+		break;	}	
+		
+	case BAJANUM:
+		if(sym=='/'){
+		std::cout << num1/num2 << std::endl;
+		break;
+	}	
+	case UNKNOWN:
+		std::cout << "Unknown" << std::endl;
+	
+}
 }
 	
 
