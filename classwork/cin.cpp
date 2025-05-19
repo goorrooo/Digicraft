@@ -176,8 +176,9 @@ int main(){
 	switch(mth){
 	case GUMARUM:
 		if(sym=='+'){
-	 	std::cout << num1+num2 << std::endl;
-		break; }
+	 	 int b = num1+num2; 
+		std::cout << b << std::endl;
+		break;}
 	case HANUM:
 		if(sym=='-'){
 		std::cout << num1-num2 << std::endl;
@@ -199,28 +200,3 @@ int main(){
 }
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-	
