@@ -31,13 +31,15 @@ do {
 int main(){
 
 int i = 0;
-for(i<3; i++){
-std::string log;
-std::string pass;
+for(int i = 0; i<3; i++ ){
+
+std::string log = " ";
+std::string pass = " ";
 std::cout << "Input your login: " << std::endl;
 std::cin >> log;
+/*
 std::cout << "Input your password: " << std::endl;
-std::cin >> pass;
+std::cin >> pass; 
 	if(log != "Student")
 	i++;
 	std::cout << "Login failed" << std::endl;
@@ -52,9 +54,19 @@ std::cin >> pass;
 }	
 
 
+}*/
+	if(log == "Student"){
+	std::cin >> pass;
+	if(pass == "123"){
+	std::cout << "Sucessfully" << std::endl;
+	break;	
+	}
+} std::cout << "Error" << std::endl;
+
+
+
+
 }
-
-
 return 0;
 
 }
