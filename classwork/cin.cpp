@@ -176,21 +176,26 @@ int main(){
 	switch(mth){
 	case GUMARUM:
 		if(sym=='+'){
+<<<<<<< HEAD
 	 	 int b = num1+num2; 
 		std::cout << b << std::endl;
 		break;}
+=======
+	 	std::cout << num1 + num2 << std::endl;
+		break; }
+>>>>>>> 3813e9a (3way)
 	case HANUM:
 		if(sym=='-'){
-		std::cout << num1-num2 << std::endl;
+		std::cout << num1 - num2 << std::endl;
 		break;}
 	case BAZMAPATKUM:
 		if(sym=='*'){
-		std::cout << num1*num2 << std::endl;
+		std::cout << num1 * num2 << std::endl;
 		break;	}	
 		
 	case BAJANUM:
 		if(sym=='/'){
-		std::cout << num1/num2 << std::endl;
+		std::cout << num1 /num2 << std::endl;
 		break;
 	}	
 	case UNKNOWN:
