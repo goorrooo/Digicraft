@@ -1,6 +1,7 @@
 #include <iostream>
 
 
+
 /*
 int main(){
 	int a =7;
@@ -11,7 +12,6 @@ int main(){
 
 }
 -------------------------------------------------------------------------------------------
-*/
 
 
 int main(){
@@ -31,3 +31,57 @@ int main(){
 	
 
 }
+int& r = a - reference 
+*/
+struct Student{
+	std::string* name = nullptr;
+	int* grade = nullptr;
+
+};
+
+
+int main(){
+	Student* pSt = new Student();
+	(*pSt).name = new std::string("Gor");
+	(*pS).grade = new int(1);
+	std::cout << *(pSt->name) << std::endl;
+	std::cout << *(pSt->grade) << std::endl;
+	
+
+}
+
+
+/*
+
+int main(){
+	int a = 1;
+	int& r = a;
+	r = 10;
+	std::cout << r << std::endl; 
+
+
+	
+
+};
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
