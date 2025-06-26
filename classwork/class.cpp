@@ -14,7 +14,12 @@ Car::Car(){
 
 class Student{
 public:
-	Student();
+	Student(){
+	m_name = "Unknown";
+	m_surname = "Unknown";
+	m_age = 0;
+};
+	Student(std::string name, std::string surname, int age);
 	~Student();
 	void setName(std::string name);
 	std::string getName();
@@ -61,18 +66,17 @@ void Student::printInfo(){
 
 
 };
-Student::Student(){
-	m_name = "";
-	m_surname = "";
-	m_age = 0;	
-
+Student::Student(std::string name, std::string surname, int age){
+	m_name = name ;
+	m_surname = surname;
+	m_age = age;
 };
 
 Student::~Student(){
 
 };
 
-int main(){
+int main(){/*
 	Student* st = new Student() ;
     st-> setName("Gor");
 	st-> getName();
@@ -80,7 +84,11 @@ int main(){
     st-> getSurname();
     st-> setAge(21);
 	st-> getAge();
-    st-> printInfo();
+    st-> printInfo();*/
+	Student st;
+	st.printInfo();
+	Student t("Vzgo","Arsenyan",12);
+	t.printInfo();
 	return 0;
 
 };
