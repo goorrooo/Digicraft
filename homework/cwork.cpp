@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
- // Class abput Student	
+ // Class about Student	
 class Student{
 	//Special f(x)
 	public:	
