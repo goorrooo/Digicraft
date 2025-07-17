@@ -51,7 +51,7 @@ while True:
 
 contacts = dict({})
 while True:
- ave = input("Add/View/Search/Delete/Exit " "\n")
+ ave = input("Add/View/Search/Delete/Update/Exit " "\n")
  value = []
  if ave == "Add":
    name = input("Input name: " "\n")
@@ -68,9 +68,19 @@ while True:
    dlt = input("Input name contact: " "\n")
    name = dlt
    del contacts[name]
+ elif ave == "Update":
+   upn = input("Input name for update: " "\n")
+   name = upn
+   contacts[name] = None
+   upv = int(input("Input number: " "\n"))
+   value = [upv]
+   contacts[name] = value  
+      
  elif ave == "Exit":
    print("Exit programm")
    break
+ else:
+   print("Unknown")
       
 
 
