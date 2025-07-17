@@ -50,19 +50,28 @@ while True:
 """
 
 contacts = dict({})
-
 while True:
- ave = input("Add/View/Search/Delete/Exit")
+ ave = input("Add/View/Search/Delete/Exit " "\n")
+ value = []
  if ave == "Add":
-   name = input("Input name: ")
-   value = int(input("Input phone: "))
-   contacts.append(name)
-   contacts.append(value)
+   name = input("Input name: " "\n")
+   num = int(input("Input phone: " "\n"))
+   value.append(num)
+   contacts[name] = value
  elif ave == "View":
    print(contacts)
  elif ave == "Search":
-   print   
-
+   src = input("Input Name contact: " "\n")
+   name = src
+   print(contacts[name])
+ elif ave == "Delete":
+   dlt = input("Input name contact: " "\n")
+   name = dlt
+   del contacts[name]
+ elif ave == "Exit":
+   print("Exit programm")
+   break
+      
 
 
 

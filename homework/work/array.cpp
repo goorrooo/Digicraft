@@ -42,7 +42,7 @@ for(int a =0; a < 3; a++){
 // Dynamic array
 int main(){
 
-int* Parr = new int[3][2];//[2]
+int* Parr = new int[3];//[2]
 for(int i = 0; i < 3; i++){
 //	for(int j = 0; j < 2; j++){
 		std::cout << "Input array value: " ;
@@ -57,3 +57,25 @@ for(int a =0; a < 3; a++){
 delete[] Parr;
 
 }
+
+
+//     -------------------------- Shablon f(x)
+
+template <typename t>
+void print_arr(t* arr, int len); 
+
+int main(){
+    int arr[4] = {1,2,3,4};
+    char Carr[3] = {'1','2','3'};
+    print_arr(Carr,3);
+    return 0;
+}
+template <typename t>
+void print_arr(t* arr, int len){
+    for(int i = 0; i < len; i++){
+        std::cout << *(arr + i) << std::endl;
+        }
+};
+                                                                            
+                                                                            
+                                                                               
