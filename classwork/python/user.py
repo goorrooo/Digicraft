@@ -1,4 +1,4 @@
-user = int(input("Input students: "))
+"""user = int(input("Input students: "))
 avg = 0
 def StudentScore(score): 
   if score > 50:
@@ -14,4 +14,33 @@ for i in range(user):
   StudentScore(score)
 
 result = avg/user
-print(result)
+print(result) """
+
+
+def f(n):
+ return lambda x: x + n
+ 
+
+
+a = f(2)
+b = f(5)
+print(a(2))
+print(b(5))
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
