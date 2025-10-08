@@ -1,9 +1,16 @@
-#include "../include/header.h"
 #include <iostream>
-
+#include <sqlite3.h>
+#include "../include/sqlutill.h"
 
 int main(){
-	std::cout << add(3,3) << std::endl;
-	std::cout << sub(3,3) << std::endl;
+	sqlite3* db = nullptr;
+	const std::string file = "my.db";
+	const std::string name = "Kim";
+	create(file, db);
+	createTable(db);
+	insert(db,name, 20);
+	selectTable(db);
+	close(db);
+
 	return 0;	
 };
