@@ -1,23 +1,18 @@
 #include <iostream>
 #include <sqlite3.h>
 #include "../include/sqlutill.h"
-	Person::Person(const std::string& filedb) : db(nullptr), filename(filedb){}
 
-	Person::~Person(){
-		closeDB();
-	}
-	
-bool Person::create(){
-	int rc = sqlite3_open(filename.c_str(), &db); ////
+bool create(const std::string& file, sqlite3*& db){
+	int rc = sqlite3_open(file.c_str(), &db); ////
 	if (rc != SQLITE_OK){
 		std::cerr << "Open failed: "<< sqlite3_errmsg(db) << "\n";
 		sqlite3_close(db);
 		return false;
 	}	
 		return true;
-}
+};
 
-bool  Person::createTable(){
+bool  createTable(sqlite3*& db){
 	const char* command = "CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);";
 	char* errmsg = nullptr;
 	int rc = sqlite3_exec(db, command, nullptr, nullptr, &errmsg);
@@ -28,9 +23,9 @@ bool  Person::createTable(){
 	}
 	return true;
 
-}
+};
 
-bool Person::insertTable(const std::string& name, int age){
+bool insertTable(sqlite3*& db, const std::string& name, const int& age){
 	std::string sql = "INSERT INTO person (name,age) VALUES ('" + name + "', " + std::to_string(age) + ");";
 	char* errmsg = nullptr;
 	int rc = sqlite3_exec(db,sql.c_str(), nullptr, nullptr, &errmsg);
@@ -40,9 +35,9 @@ bool Person::insertTable(const std::string& name, int age){
 			return false;
 		}
 			return true;
-	}
+	};
 
-bool Person::selectTable(){	
+bool selectTable(sqlite3*& db){	
 	const char* sql = "SELECT * FROM person;";
 	auto callback = [](void*, int argc, char** argv, char** azCoName) -> int {
 			for(int i = 0; i < argc; i++){
@@ -60,14 +55,16 @@ bool Person::selectTable(){
 		return false;
 	}	
 		return true;
-	}
+	};
 
-void Person::closeDB(){
+void close(sqlite3*& db){
 	if(db){	
 		sqlite3_close(db);
 		db = nullptr;
 	}	
-	}
+	};
+
+
 
 
 
